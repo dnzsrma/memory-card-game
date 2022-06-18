@@ -5,9 +5,64 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+img{
+  height: auto;
+  width: 100%;
+  max-width: 150px;
+}
+#card-container{
+  position: absolute;
+  bottom: 0px;
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6,1fr) ;
+  grid-template-rows: repeat(auto-fill,1fr) ;
+  row-gap: 20px ;
+  column-gap: 40px;
+  justify-content: center;
+  background-color: rgba(56, 54, 54, 0.8);
+}
+header *{
+  margin-right: 30px;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  font-size: 3vw;
+  width: 100%;
+  justify-content: center;
+  color: gold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  font-variant: small-caps;
+  text-shadow: 5px 5px 5px gray;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
