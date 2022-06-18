@@ -19,13 +19,15 @@ img{
   max-width: 150px;
 }
 #card-container{
-  position: absolute;
-  bottom: 0px;
-  height: auto;
+  position: relative;
+  top: 0px;
+  height: 70vh;
+  overflow: auto;
+  max-height: 200vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(6,1fr) ;
-  grid-template-rows: repeat(auto-fill,1fr) ;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) ;
+  grid-template-rows: repeat(auto-fill,minmax(220px, 1fr)) ;
   row-gap: 20px ;
   column-gap: 40px;
   justify-content: center;
